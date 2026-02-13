@@ -2,24 +2,20 @@
 
 A practical **blank-canvas software engineering workspace**.
 
-This is now a creative lab for building tiny, real tools with strong engineering habits.
-Think of it as a place where ideas become shippable experiments in hours—not months.
+Instead of decorative content, this repo now starts as a buildable foundation for iterative learning:
+- one executable entry point,
+- one test suite,
+- one clear roadmap,
+- and room to grow with real features.
 
 ## What I would build here
 
-If this were my space, I’d build a **Learning Lab CLI** that helps me:
-- capture goals,
-- turn goals into small deliverables,
-- and reflect on progress with data.
+If this were my personal engineering sandbox, I would build a **Learning Lab CLI**:
 
-## Current capabilities
-
-The CLI currently supports:
-- `banner` — project intent snapshot.
-- `init` — initialize a local workspace DB.
-- `add-goal` — add a goal to the backlog.
-- `list-goals` — show tracked goals.
-- `reflect` — summarize progress.
+- Track learning goals as small projects.
+- Capture experiments and outcomes quickly.
+- Keep strict iteration loops (plan → build → test → reflect).
+- Evolve into a portfolio of tiny, high-quality utilities.
 
 ## Initial project layout
 
@@ -38,25 +34,31 @@ learning01/
 ## Quick start
 
 ```bash
-# Show the project banner
-PYTHONPATH=src python -m learning01.cli banner
-
-# Use a local goals file
-PYTHONPATH=src python -m learning01.cli --db .learning01/goals.json init
-PYTHONPATH=src python -m learning01.cli --db .learning01/goals.json add-goal "Build first prototype"
-PYTHONPATH=src python -m learning01.cli --db .learning01/goals.json list-goals
-PYTHONPATH=src python -m learning01.cli --db .learning01/goals.json reflect
-
-# Run tests
+PYTHONPATH=src python -m learning01.cli
 pytest -q
 ```
 
-## Next creative engineering moves
+## Roadmap
 
-1. Add status transitions (`todo` → `doing` → `done`).
-2. Add deadlines and priority scoring.
-3. Add markdown export for weekly review notes.
-4. Add CI + linting + type checking.
+### Phase 1 — Foundation (current)
+- [x] Basic CLI entrypoint.
+- [x] Smoke tests for output stability.
+- [x] Defined project direction.
+
+### Phase 2 — Core utility
+- [ ] Add commands (`init`, `add-goal`, `list-goals`, `reflect`).
+- [ ] Persist goals in a local JSON file.
+- [ ] Add input validation + user-friendly errors.
+
+### Phase 3 — Engineering quality
+- [ ] Add linting + formatting automation.
+- [ ] Add CI workflow for tests and style checks.
+- [ ] Add typed interfaces and richer unit tests.
+
+### Phase 4 — Portfolio polish
+- [ ] Add examples of completed learning tracks.
+- [ ] Generate a summary report from tracked goals.
+- [ ] Publish a versioned release.
 
 ## Engineering principles for this repo
 
